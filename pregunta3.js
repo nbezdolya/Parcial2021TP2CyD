@@ -3,7 +3,13 @@
 // si la longitud del array es < 3 se debe retornar undefined
 
 const greater3 = nums => {
+    let arrayOrdenado = Array.from(new Set(nums.sort((a, b) => b - a)));
     
+    if (arrayOrdenado.length >= 3) {
+        return arrayOrdenado[2];
+    } else {
+        return undefined;
+    }
 }
 
 

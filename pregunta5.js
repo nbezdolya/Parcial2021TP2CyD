@@ -20,3 +20,13 @@ const beers = [
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
 ];
 
+beers.map(element => {
+  let pivot = element.label.split('/');
+  pivot[2] = 'tecnoshare.sharepoint.com';
+  pivot[3] = 'sites';
+  pivot[pivot.length - 1] = (element.name.replace(/ /g, '_') + '.png').toLowerCase();
+
+  element.label = pivot.join('/');
+});
+
+console.log(beers);

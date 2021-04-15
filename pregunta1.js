@@ -4,11 +4,27 @@
  */
 
 const even = function(numbers){
-    
+    let arrayRetorno = [];
+
+    numbers.forEach(element => {
+        if (element % 2 === 0) {
+            arrayRetorno.push(element);
+        }
+    });
+
+    return arrayRetorno;
 }
 
 const odd = function(numbers){
+    let arrayRetorno = [];
 
+    numbers.forEach(element => {
+        if (element % 2 != 0) {
+            arrayRetorno.push(element);
+        }
+    });
+
+    return arrayRetorno;
 }
 
 // TESTS (no modificar)
